@@ -1,0 +1,9 @@
+SystemHelper:
+    api:
+        extension: yml
+        dependency:
+            update: False
+            list: [Popen,Path]
+    python:
+        version: '3.8'
+        version-command: python --version
