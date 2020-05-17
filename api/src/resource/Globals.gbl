@@ -3,4 +3,4 @@ Globals:
     print-status: True
     api:
         extension: yml
-        list: [SystemHelper,Globals,SeleniumHelper,SwaggerIntegrationTests,OfficeTrackIntegrationTests,GitCommitter,VoiceAssistant]
+        list: [SystemHelper,Globals,SeleniumHelper,SwaggerIntegrationTests,OfficeTrackIntegrationTests,GitCommitter,VoiceAssistant,WebScrapHelper]
