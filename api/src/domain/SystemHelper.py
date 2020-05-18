@@ -10,6 +10,7 @@ class SystemHelper:
         self.addGitCommitter()
         self.addOfficeTrackIntegrationTests()
         self.addVoiceAssistant()
+        self.addWebScrapHelper()
 
     def handleSystemArgumentValue(self,systemArgumentValueList,externalFunction):
         try :
@@ -62,11 +63,20 @@ class SystemHelper:
         except Exception as exception :
             self.apiNotFound(apiKey,str(exception))
 
+    def addWebScrapHelper(self):
+        apiKey = self.globals.CIFRAS_CLUB_WEB_SCRAPER
+        try :
+            import CifrasClubWebScraper
+            apiClass = CifrasClubWebScraper.CifrasClubWebScraper
+            self.addApi(apiKey,apiClass)
+        except Exception as exception :
+            self.apiNotFound(apiKey,str(exception))
+
     def addApi(self,apiKey,apiClass):
         self.apiSet[apiKey] = apiClass
 
     def apiNotFound(self,apiKey,cause):
-        self.globals.debug(f'Not possible to reach {apiKey} due command line. Case: {cause}')
+        self.globals.debug(f'Not possible to reach {apiKey} due command line. Cause: {cause}')
 
 
 def run(externalFunction,globals,**kwargs):
