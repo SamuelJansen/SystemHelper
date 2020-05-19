@@ -37,7 +37,7 @@ class SystemHelper:
             print(f'''{self.globals.ERROR}{SystemHelper.__name__} error processing "{systemArgumentValueList[1]}" call. Cause: {str(exception)}''')
 
     def addGitCommitter(self):
-        apiKey = self.globals.GITC_GIT_COMMITTER
+        apiKey = self.globals.GIT_COMMITTER
         try :
             import GitCommitter
             apiClass = GitCommitter.GitCommitter
