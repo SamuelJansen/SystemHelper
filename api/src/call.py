@@ -4,5 +4,5 @@ def systemHelper(commandList,globals,**kwargs):
 if __name__ == '__main__' :
     from domain.control import Globals
     globals = Globals.Globals(debugStatus = True)
-    import SystemHelper, SqlAlchemyHelper
+    import SystemHelper
     SystemHelper.run(systemHelper,globals)
